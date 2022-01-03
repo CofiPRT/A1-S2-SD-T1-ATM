@@ -1,0 +1,148 @@
+You must change your PIN.
+(card number: 1234567890011100, PIN: 1234, expiry date: 01/20, CVV: 111, balance: 0, status: ACTIVE, history: [(SUCCESS, pin_change 1234567890011100 1234), (SUCCESS, insert_card 1234567890011100 0000)])
+(card number: 1234567890011101, PIN: 0001, expiry date: 02/21, CVV: 112, balance: 0, status: NEW, history: [])
+Invalid PIN
+Invalid PIN
+Invalid PIN
+The card is blocked. Please contact the administrator.
+Invalid PIN
+Invalid PIN
+Invalid PIN
+pos0: [
+(card number: 1234567890011100, PIN: 1234, expiry date: 01/20, CVV: 111, balance: 0, status: ACTIVE, history: [(SUCCESS, cancel 1234567890011100), (SUCCESS, insert_card 1234567890011100 1234), (FAIL, insert_card 1234567890011100 0000), (SUCCESS, pin_change 1234567890011100 1234), (SUCCESS, insert_card 1234567890011100 0000)])
+]
+pos1: [
+(card number: 1234567890011101, PIN: 0001, expiry date: 02/21, CVV: 112, balance: 0, status: LOCKED, history: [(FAIL, insert_card 1234567890011101 1234), (FAIL, insert_card 1234567890011101 1234), (FAIL, insert_card 1234567890011101 1234)])
+]
+pos2: [
+(card number: 1234567890011102, PIN: 0002, expiry date: 01/22, CVV: 113, balance: 0, status: NEW, history: [(FAIL, insert_card 1234567890011102 1234), (FAIL, insert_card 1234567890011102 1234)])
+]
+The card already exists
+(card number: 1234567890011102, PIN: 0002, expiry date: 01/22, CVV: 113, balance: 0, status: ACTIVE, history: [(FAIL, insert_card 1234567890011102 1234), (FAIL, insert_card 1234567890011102 1234)])
+(card number: 1234567890011102, PIN: 0009, expiry date: 01/22, CVV: 113, balance: 0, status: ACTIVE, history: [(SUCCESS, pin_change 1234567890011102 0009), (SUCCESS, insert_card 1234567890011102 0002), (FAIL, insert_card 1234567890011102 1234), (FAIL, insert_card 1234567890011102 1234)])
+pos0: [
+(card number: 1234567890011106, PIN: 0006, expiry date: 01/23, CVV: 117, balance: 0, status: NEW, history: [])
+(card number: 1234567890011100, PIN: 1234, expiry date: 01/20, CVV: 111, balance: 0, status: ACTIVE, history: [(SUCCESS, cancel 1234567890011100), (SUCCESS, insert_card 1234567890011100 1234), (FAIL, insert_card 1234567890011100 0000), (SUCCESS, pin_change 1234567890011100 1234), (SUCCESS, insert_card 1234567890011100 0000)])
+]
+pos1: [
+(card number: 1234567890011101, PIN: 0001, expiry date: 02/21, CVV: 112, balance: 0, status: LOCKED, history: [(FAIL, insert_card 1234567890011101 1234), (FAIL, insert_card 1234567890011101 1234), (FAIL, insert_card 1234567890011101 1234)])
+]
+pos2: [
+(card number: 1234567890011102, PIN: 0009, expiry date: 01/22, CVV: 113, balance: 0, status: ACTIVE, history: [(SUCCESS, pin_change 1234567890011102 0009), (SUCCESS, insert_card 1234567890011102 0002), (FAIL, insert_card 1234567890011102 1234), (FAIL, insert_card 1234567890011102 1234)])
+]
+pos3: [
+(card number: 1234567890011109, PIN: 9991, expiry date: 05/21, CVV: 152, balance: 0, status: NEW, history: [])
+(card number: 1234567890011103, PIN: 0003, expiry date: 02/23, CVV: 114, balance: 0, status: NEW, history: [])
+]
+pos0: [
+(card number: 1234567890011100, PIN: 1234, expiry date: 01/20, CVV: 111, balance: 0, status: ACTIVE, history: [(SUCCESS, cancel 1234567890011100), (SUCCESS, insert_card 1234567890011100 1234), (FAIL, insert_card 1234567890011100 0000), (SUCCESS, pin_change 1234567890011100 1234), (SUCCESS, insert_card 1234567890011100 0000)])
+]
+pos1: []
+pos2: [
+(card number: 1234567890011102, PIN: 0009, expiry date: 01/22, CVV: 113, balance: 0, status: ACTIVE, history: [(SUCCESS, pin_change 1234567890011102 0009), (SUCCESS, insert_card 1234567890011102 0002), (FAIL, insert_card 1234567890011102 1234), (FAIL, insert_card 1234567890011102 1234)])
+]
+pos3: [
+(card number: 1234567890011109, PIN: 9991, expiry date: 05/21, CVV: 152, balance: 0, status: NEW, history: [])
+(card number: 1234567890011103, PIN: 0003, expiry date: 02/23, CVV: 114, balance: 0, status: NEW, history: [])
+]
+You must change your PIN.
+(card number: 1234567890011109, PIN: 0000, expiry date: 05/21, CVV: 152, balance: 0, status: ACTIVE, history: [(SUCCESS, pin_change 1234567890011109 0000), (SUCCESS, insert_card 1234567890011109 9991)])
+Invalid PIN
+Invalid PIN
+Invalid PIN
+The card is blocked. Please contact the administrator.
+The card is blocked. Please contact the administrator.
+The card is blocked. Please contact the administrator.
+(card number: 1234567890011109, PIN: 0000, expiry date: 05/21, CVV: 152, balance: 0, status: LOCKED, history: [(FAIL, insert_card 1234567890011109 9991), (FAIL, insert_card 1234567890011109 9991), (FAIL, insert_card 1234567890011109 9991), (FAIL, insert_card 1234567890011109 9991), (FAIL, insert_card 1234567890011109 9991), (SUCCESS, pin_change 1234567890011109 0000), (SUCCESS, insert_card 1234567890011109 9991)])
+pos0: [
+(card number: 1234567890011100, PIN: 1234, expiry date: 01/20, CVV: 111, balance: 0, status: ACTIVE, history: [(SUCCESS, cancel 1234567890011100), (SUCCESS, insert_card 1234567890011100 1234), (FAIL, insert_card 1234567890011100 0000), (SUCCESS, pin_change 1234567890011100 1234), (SUCCESS, insert_card 1234567890011100 0000)])
+]
+pos1: []
+pos2: [
+(card number: 1234567890011102, PIN: 0009, expiry date: 01/22, CVV: 113, balance: 0, status: ACTIVE, history: [(SUCCESS, pin_change 1234567890011102 0009), (SUCCESS, insert_card 1234567890011102 0002), (FAIL, insert_card 1234567890011102 1234), (FAIL, insert_card 1234567890011102 1234)])
+]
+pos3: [
+(card number: 1234567890011109, PIN: 0000, expiry date: 05/21, CVV: 152, balance: 0, status: ACTIVE, history: [(FAIL, insert_card 1234567890011109 9991), (FAIL, insert_card 1234567890011109 9991), (FAIL, insert_card 1234567890011109 9991), (FAIL, insert_card 1234567890011109 9991), (FAIL, insert_card 1234567890011109 9991), (SUCCESS, pin_change 1234567890011109 0000), (SUCCESS, insert_card 1234567890011109 9991)])
+(card number: 1234567890011103, PIN: 0003, expiry date: 02/23, CVV: 114, balance: 0, status: NEW, history: [])
+]
+pos4: [
+(card number: 1234567890011104, PIN: 0004, expiry date: 03/23, CVV: 115, balance: 0, status: NEW, history: [])
+]
+pos5: [
+(card number: 1234567890011105, PIN: 0005, expiry date: 02/22, CVV: 116, balance: 0, status: NEW, history: [])
+]
+You must change your PIN.
+pos0: [
+(card number: 1234567890011100, PIN: 1234, expiry date: 01/20, CVV: 111, balance: 0, status: ACTIVE, history: [(SUCCESS, cancel 1234567890011100), (SUCCESS, insert_card 1234567890011100 1234), (FAIL, insert_card 1234567890011100 0000), (SUCCESS, pin_change 1234567890011100 1234), (SUCCESS, insert_card 1234567890011100 0000)])
+]
+pos1: []
+pos2: [
+(card number: 1234567890011102, PIN: 0009, expiry date: 01/22, CVV: 113, balance: 0, status: ACTIVE, history: [(SUCCESS, pin_change 1234567890011102 0009), (SUCCESS, insert_card 1234567890011102 0002), (FAIL, insert_card 1234567890011102 1234), (FAIL, insert_card 1234567890011102 1234)])
+]
+pos3: [
+(card number: 1234567890011103, PIN: 0003, expiry date: 02/23, CVV: 114, balance: 0, status: NEW, history: [])
+]
+pos4: [
+(card number: 1234567890011104, PIN: 0004, expiry date: 03/23, CVV: 115, balance: 0, status: NEW, history: [])
+]
+pos5: [
+(card number: 1234567890011105, PIN: 4444, expiry date: 02/22, CVV: 116, balance: 0, status: ACTIVE, history: [(SUCCESS, pin_change 1234567890011105 4444), (SUCCESS, insert_card 1234567890011105 0005)])
+]
+pos6: []
+pos7: [
+(card number: 1234567890011107, PIN: 0007, expiry date: 04/23, CVV: 118, balance: 0, status: NEW, history: [])
+]
+pos8: []
+pos9: [
+(card number: 1234567890011109, PIN: 0000, expiry date: 05/21, CVV: 152, balance: 0, status: ACTIVE, history: [(FAIL, insert_card 1234567890011109 9991), (FAIL, insert_card 1234567890011109 9991), (FAIL, insert_card 1234567890011109 9991), (FAIL, insert_card 1234567890011109 9991), (FAIL, insert_card 1234567890011109 9991), (SUCCESS, pin_change 1234567890011109 0000), (SUCCESS, insert_card 1234567890011109 9991)])
+]
+pos0: [
+(card number: 1234567890011100, PIN: 1234, expiry date: 01/20, CVV: 111, balance: 0, status: ACTIVE, history: [(SUCCESS, cancel 1234567890011100), (SUCCESS, insert_card 1234567890011100 1234), (FAIL, insert_card 1234567890011100 0000), (SUCCESS, pin_change 1234567890011100 1234), (SUCCESS, insert_card 1234567890011100 0000)])
+]
+pos1: []
+pos2: [
+(card number: 1234567890011102, PIN: 0009, expiry date: 01/22, CVV: 113, balance: 0, status: ACTIVE, history: [(SUCCESS, pin_change 1234567890011102 0009), (SUCCESS, insert_card 1234567890011102 0002), (FAIL, insert_card 1234567890011102 1234), (FAIL, insert_card 1234567890011102 1234)])
+]
+pos3: [
+(card number: 1234567890011103, PIN: 0003, expiry date: 02/23, CVV: 114, balance: 0, status: NEW, history: [])
+]
+pos4: [
+(card number: 1234567890011104, PIN: 0004, expiry date: 03/23, CVV: 115, balance: 0, status: NEW, history: [])
+]
+pos5: [
+(card number: 1234567890011105, PIN: 4444, expiry date: 02/22, CVV: 116, balance: 0, status: ACTIVE, history: [(SUCCESS, pin_change 1234567890011105 4444), (SUCCESS, insert_card 1234567890011105 0005)])
+]
+pos6: []
+pos7: [
+(card number: 1234567890011107, PIN: 0007, expiry date: 04/23, CVV: 118, balance: 0, status: NEW, history: [])
+]
+pos8: []
+pos9: [
+(card number: 0000000000000900, PIN: 9199, expiry date: 07/21, CVV: 154, balance: 0, status: NEW, history: [])
+(card number: 1234567890011190, PIN: 9919, expiry date: 06/21, CVV: 153, balance: 0, status: NEW, history: [])
+(card number: 1234567890011109, PIN: 0000, expiry date: 05/21, CVV: 152, balance: 0, status: ACTIVE, history: [(FAIL, insert_card 1234567890011109 9991), (FAIL, insert_card 1234567890011109 9991), (FAIL, insert_card 1234567890011109 9991), (FAIL, insert_card 1234567890011109 9991), (FAIL, insert_card 1234567890011109 9991), (SUCCESS, pin_change 1234567890011109 0000), (SUCCESS, insert_card 1234567890011109 9991)])
+]
+You must change your PIN.
+(card number: 1234567890011190, PIN: 9919, expiry date: 06/21, CVV: 153, balance: 0, status: NEW, history: [(SUCCESS, cancel 1234567890011190), (SUCCESS, insert_card 1234567890011190 9919)])
+pos0: [
+(card number: 1234567890011100, PIN: 1234, expiry date: 01/20, CVV: 111, balance: 0, status: ACTIVE, history: [(SUCCESS, cancel 1234567890011100), (SUCCESS, insert_card 1234567890011100 1234), (FAIL, insert_card 1234567890011100 0000), (SUCCESS, pin_change 1234567890011100 1234), (SUCCESS, insert_card 1234567890011100 0000)])
+]
+pos1: []
+pos2: [
+(card number: 1234567890011102, PIN: 0009, expiry date: 01/22, CVV: 113, balance: 0, status: ACTIVE, history: [(SUCCESS, pin_change 1234567890011102 0009), (SUCCESS, insert_card 1234567890011102 0002), (FAIL, insert_card 1234567890011102 1234), (FAIL, insert_card 1234567890011102 1234)])
+]
+pos3: [
+(card number: 1234567890011103, PIN: 0003, expiry date: 02/23, CVV: 114, balance: 0, status: NEW, history: [])
+]
+pos4: [
+(card number: 1234567890011104, PIN: 0004, expiry date: 03/23, CVV: 115, balance: 0, status: NEW, history: [])
+]
+pos5: [
+(card number: 1234567890011105, PIN: 4444, expiry date: 02/22, CVV: 116, balance: 0, status: ACTIVE, history: [(SUCCESS, pin_change 1234567890011105 4444), (SUCCESS, insert_card 1234567890011105 0005)])
+]
+pos6: []
+pos7: [
+(card number: 1234567890011107, PIN: 0007, expiry date: 04/23, CVV: 118, balance: 0, status: NEW, history: [])
+]
+pos8: []
+pos9: []

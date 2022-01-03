@@ -1,0 +1,20 @@
+The card already exists
+pos0: []
+pos1: [
+(card number: 1234567890011110, PIN: 0004, expiry date: 05/20, CVV: 115, balance: 0, status: NEW, history: [])
+(card number: 1234567890011101, PIN: 0001, expiry date: 02/21, CVV: 112, balance: 0, status: NEW, history: [])
+]
+pos2: [
+(card number: 1234567890011111, PIN: 0005, expiry date: 06/21, CVV: 116, balance: 0, status: NEW, history: [])
+]
+pos3: []
+pos4: [
+(card number: 1234567890011104, PIN: 0002, expiry date: 03/22, CVV: 113, balance: 0, status: NEW, history: [])
+]
+pos5: [
+(card number: 1234567890011114, PIN: 0006, expiry date: 07/22, CVV: 117, balance: 0, status: NEW, history: [])
+(card number: 1234567890011105, PIN: 0003, expiry date: 04/23, CVV: 114, balance: 0, status: NEW, history: [])
+]
+pos6: [
+(card number: 1234567890011115, PIN: 0007, expiry date: 08/23, CVV: 118, balance: 0, status: NEW, history: [])
+]

@@ -1,0 +1,57 @@
+You must change your PIN.
+You must change your PIN.
+100
+You must change your PIN.
+120
+(card number: 1234567890011100, PIN: 0000, expiry date: 01/20, CVV: 111, balance: 120, status: NEW, history: [(SUCCESS, recharge 1234567890011100 20), (SUCCESS, insert_card 1234567890011100 0000), (SUCCESS, recharge 1234567890011100 100), (SUCCESS, insert_card 1234567890011100 0000), (SUCCESS, cancel 1234567890011100), (SUCCESS, insert_card 1234567890011100 0000)])
+The added amount must be multiple of 10
+(card number: 1234567890011100, PIN: 0000, expiry date: 01/20, CVV: 111, balance: 120, status: ACTIVE, history: [(FAIL, recharge 1234567890011100 8), (SUCCESS, insert_card 1234567890011100 0000), (SUCCESS, recharge 1234567890011100 20), (SUCCESS, insert_card 1234567890011100 0000), (SUCCESS, recharge 1234567890011100 100), (SUCCESS, insert_card 1234567890011100 0000), (SUCCESS, cancel 1234567890011100), (SUCCESS, insert_card 1234567890011100 0000)])
+You must change your PIN.
+Insufficient funds
+You must change your PIN.
+0
+You must change your PIN.
+120
+110
+pos0: []
+pos1: []
+pos2: [
+(card number: 1234567890011104, PIN: 0001, expiry date: 02/21, CVV: 112, balance: 120, status: NEW, history: [(SUCCESS, recharge 1234567890011104 120), (SUCCESS, insert_card 1234567890011104 0001), (SUCCESS, balance_inquiry 1234567890011104), (SUCCESS, insert_card 1234567890011104 0001), (FAIL, cash_withdrawal 1234567890011104 10), (SUCCESS, insert_card 1234567890011104 0001)])
+]
+pos3: [
+(card number: 1234567890011100, PIN: 0000, expiry date: 01/20, CVV: 111, balance: 110, status: ACTIVE, history: [(SUCCESS, cash_withdrawal 1234567890011100 10), (SUCCESS, insert_card 1234567890011100 0000), (FAIL, recharge 1234567890011100 8), (SUCCESS, insert_card 1234567890011100 0000), (SUCCESS, recharge 1234567890011100 20), (SUCCESS, insert_card 1234567890011100 0000), (SUCCESS, recharge 1234567890011100 100), (SUCCESS, insert_card 1234567890011100 0000), (SUCCESS, cancel 1234567890011100), (SUCCESS, insert_card 1234567890011100 0000)])
+]
+pos0: []
+pos1: []
+pos2: []
+pos3: [
+(card number: 1234567890011155, PIN: 0003, expiry date: 04/20, CVV: 114, balance: 0, status: NEW, history: [])
+(card number: 1234567890011105, PIN: 0002, expiry date: 03/20, CVV: 113, balance: 0, status: NEW, history: [])
+(card number: 1234567890011100, PIN: 0000, expiry date: 01/20, CVV: 111, balance: 110, status: ACTIVE, history: [(SUCCESS, cash_withdrawal 1234567890011100 10), (SUCCESS, insert_card 1234567890011100 0000), (FAIL, recharge 1234567890011100 8), (SUCCESS, insert_card 1234567890011100 0000), (SUCCESS, recharge 1234567890011100 20), (SUCCESS, insert_card 1234567890011100 0000), (SUCCESS, recharge 1234567890011100 100), (SUCCESS, insert_card 1234567890011100 0000), (SUCCESS, cancel 1234567890011100), (SUCCESS, insert_card 1234567890011100 0000)])
+]
+You must change your PIN.
+400
+You must change your PIN.
+300
+pos0: []
+pos1: []
+pos2: []
+pos3: [
+(card number: 1234567890011155, PIN: 0003, expiry date: 04/20, CVV: 114, balance: 300, status: NEW, history: [(SUCCESS, recharge 1234567890011155 300), (SUCCESS, insert_card 1234567890011155 0003)])
+(card number: 1234567890011105, PIN: 4444, expiry date: 03/20, CVV: 113, balance: 400, status: ACTIVE, history: [(SUCCESS, recharge 1234567890011105 400), (SUCCESS, insert_card 1234567890011105 4444), (SUCCESS, pin_change 1234567890011105 4444), (SUCCESS, insert_card 1234567890011105 0002)])
+(card number: 1234567890011100, PIN: 0000, expiry date: 01/20, CVV: 111, balance: 110, status: ACTIVE, history: [(SUCCESS, cash_withdrawal 1234567890011100 10), (SUCCESS, insert_card 1234567890011100 0000), (FAIL, recharge 1234567890011100 8), (SUCCESS, insert_card 1234567890011100 0000), (SUCCESS, recharge 1234567890011100 20), (SUCCESS, insert_card 1234567890011100 0000), (SUCCESS, recharge 1234567890011100 100), (SUCCESS, insert_card 1234567890011100 0000), (SUCCESS, cancel 1234567890011100), (SUCCESS, insert_card 1234567890011100 0000)])
+]
+You must change your PIN.
+60
+You must change your PIN.
+60
+You must change your PIN.
+The requested amount must be multiple of 10
+pos0: []
+pos1: []
+pos2: []
+pos3: [
+(card number: 1234567890011155, PIN: 0003, expiry date: 04/20, CVV: 114, balance: 60, status: NEW, history: [(FAIL, cash_withdrawal 1234567890011155 241), (SUCCESS, insert_card 1234567890011155 0003), (SUCCESS, balance_inquiry 1234567890011155), (SUCCESS, insert_card 1234567890011155 0003), (SUCCESS, cash_withdrawal 1234567890011155 240), (SUCCESS, insert_card 1234567890011155 0003), (SUCCESS, recharge 1234567890011155 300), (SUCCESS, insert_card 1234567890011155 0003)])
+(card number: 1234567890011105, PIN: 4444, expiry date: 03/20, CVV: 113, balance: 400, status: ACTIVE, history: [(SUCCESS, recharge 1234567890011105 400), (SUCCESS, insert_card 1234567890011105 4444), (SUCCESS, pin_change 1234567890011105 4444), (SUCCESS, insert_card 1234567890011105 0002)])
+(card number: 1234567890011100, PIN: 0000, expiry date: 01/20, CVV: 111, balance: 110, status: ACTIVE, history: [(SUCCESS, cash_withdrawal 1234567890011100 10), (SUCCESS, insert_card 1234567890011100 0000), (FAIL, recharge 1234567890011100 8), (SUCCESS, insert_card 1234567890011100 0000), (SUCCESS, recharge 1234567890011100 20), (SUCCESS, insert_card 1234567890011100 0000), (SUCCESS, recharge 1234567890011100 100), (SUCCESS, insert_card 1234567890011100 0000), (SUCCESS, cancel 1234567890011100), (SUCCESS, insert_card 1234567890011100 0000)])
+]

@@ -1,0 +1,6 @@
+Invalid PIN
+Invalid PIN
+Invalid PIN
+pos0: [
+(card number: 1234567890011100, PIN: 0000, expiry date: 01/20, CVV: 111, balance: 0, status: ACTIVE, history: [(FAIL, insert_card 1234567890011100 0001), (FAIL, insert_card 1234567890011100 0001), (FAIL, insert_card 1234567890011100 0001)])
+]

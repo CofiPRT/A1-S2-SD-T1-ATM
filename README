@@ -1,0 +1,228 @@
+--- STRUCTURI DE DATE ---
+--- TEMA 3 - TetriPic ---
+
+Cuprins:
+
+	0. Legenda..........................................Linia 22
+	1. Biblioteci si define-uri.........................Linia 29
+	2. Structuri........................................Linia 40
+	3. Modularizare
+		3.1. Fisierul "main_header.h"...................Linia 70
+		3.2. Fisierul "alloc_free_functions.c"..........Linia 77
+		3.3. Fisierul "support_functions.c".............Linia 87
+		3.4. Fisierul "admin_functions.c"...............Linia 127
+		3.5. Fisierul "client_functions.c"..............Linia 166
+		3.6. Fisierul "source.c"........................Linia 207
+	4.. Alte detalii....................................Linia 222
+
+--- ---------- ---
+--- 0. Legenda ---
+--- ---------- ---
+	- In acest README, o referinta  "(Linia #)" se refera strict la
+	linia # a acestui fisier README, nu a altui fisier.
+
+--- --------------------------- ---
+--- 1. Biblioteci si define-uri ---
+--- --------------------------- ---
+
+Folosesc:
+	<stdio.h> pentru familiile de functii 'print' si 'scan'
+	<stdlib.h> pentru functiile 'malloc' si 'free'
+	<string.h> pentru manipularea sirurilor de caractere
+
+	- MAXSIZE 100 - pentru alocarea dinamica a sirurilor de caractere
+
+--- ------------ ---
+--- 2. Structuri ---
+--- ------------ ---
+
+history:
+	- Element al unei liste de intrari de tip istoric
+	- Salveaza o intreaga operatie si rezultatul ei
+	- Salveaza si un pointer catre urmatoarea intrare
+
+card:
+	- Element al unei liste de carduri
+	- Salveaza elementele specifice unui card, precum si un pointer catre
+	istoricul ce ii corespunde (lista de intrari de istoric)
+	- Salveaza si un pointer catre urmatorul card
+
+LSC:
+	- Element al unei liste de submultimi de carduri
+	- Salveaza un pointer catre primul card din lista ce o reprezinta
+	- Salveaza si un pointer catre urmatoarea submultime
+
+LC:
+	- Principala structura cu care se lucreaza in tot programul
+	- Tine evidenta numarului de carduri
+	- Include si elemente ce facilitieaza apelurile functiilor (apelarea lor cu
+	mai putini parametri, prin salvarea lor - buffer, in_file, out_file - in
+	aceasta structura) (Linia 225)
+	- Salveaza un pointer catre cardul introdus de 'insert_card' (Linia 173)
+	- Salveaza un pointer catre prima submultime de carduri (astfel, LC poate
+	fi considerat o lista)
+
+--- ----------------------------- ---
+--- 3.1. Fisierul "main_header.h" ---
+--- ----------------------------- ---
+
+Acest fisier contine structurile antepuse si prototipurile tuturor functiilor
+ce urmeaza a fi descrise
+
+--- -------------------------------------- ---
+--- 3.2. Fisierul "alloc_free_functions.c" ---
+--- -------------------------------------- ---
+
+Acest fisier contine functii ce se ocupa de alocarea de noi elemente de tip
+structura (Linia 40) si de eliberarea acestora.
+
+In cazul in care se elibereaza un element ce contine o lista (precum 'card' ce
+contine istoricul lui), se elibereaza si lista aferenta.
+
+--- ----------------------------------- ---
+--- 3.3. Fisierul "support_functions.c" ---
+--- ----------------------------------- ---
+
+Contine functii ce ajuta la modularizarea codului si oferirea de raspunsuri
+rapide.
+
+Functia 'create_card'
+	- Intoarce un element 'card' ce este initializat pe baza string-ului primit
+	'buffer'
+
+Functia 'find_card'
+	- In functie de rezultatul functiei 'calculate_poz' (Linia 113), trece prin
+	submultimile de carduri, si prin cardurile acestora, pana cand gaseste
+	cardul cu numarul 'card_number' primit ca parametru
+
+Functia 'print_card'
+	- Scrie, in fisierul primit, datele cardului primit ca parametru. Are grija
+	sa scrie spatii si alte detalii in caz ca sunt mai multe carduri de scris.
+
+Functia 'add_entry'
+	- Scrie in istoricul cardului primit o operatie alaturi de rezultatul ei
+	(SUCCESS/FAIL)
+
+Functia 'remove_entry'
+	- Cauta o anume operatie in istoricul cardului, dupa care o elimina
+
+Functia 'calculate_poz'
+	- Calculeaza, pe baza formulei cerute, pozitia pe care un card trebuie
+	sa se afle in lista de submultimi de carduri
+
+Functia 'is_blocked'
+	- Verifica daca un card are campul 'status' blocat
+	- Daca este blocat, scrie mesajul aferent
+	- Valorea returnata este raspunsul intrebarii 'is_blocked'
+
+Functia 'is_PIN'
+	- Verifica daca un string primit are atributele unui PIN
+	- Valorea returnata este raspunsul intrebarii 'is_PIN'
+
+--- --------------------------------- ---
+--- 3.4. Fisierul "admin_functions.c" ---
+--- --------------------------------- ---
+
+Functia 'add_card'
+	- Adauga cardul returnat de 'create_card' (Linia 93) in baza de date, in
+	submultimea asociata valorii returnate de 'calculate_poz' (Linia 113)
+	- In cazul in care cardul este deja in baza de date, se afiseaza mesajul
+	aferent si se iese din functie
+	- In cazul in care o submultime (pana la submultimea corespunzatoare
+	pozitiei) nu exista, se initializeaza
+	- Cardul se adauga la inceputul submultimii aferente
+
+Functia 'delete_card'
+	- Cauta 'card_number' printre toate cardurile din baza de date si sterge
+	cardul cu acel numar.
+
+Functia 'reverse'
+	- In urma unui transfer (Linia 193), cauta in istoricul cardului destinatie
+	tranzactia in cauza si o anuleaza, returnandu-i banii cardului sursa
+	- In cazul in care cardul destinatie nu are fonduri suficiente, se scrie
+	mesajul aferent
+
+Functia 'unblock_card'
+	- Reseteaza numarul de introduceri gresite ale PIN-ului unui card si ii
+	seteaza starea acestuia la "ACTIVE".
+
+Functia 'show_database'
+	- Afiseaza informatii despre toate cardurile existente sau despre cardul
+	cu numarul primit ca parametru (daca este cazul)
+
+Functia 'rearrange'
+	- In cazul in care numarul maxim de carduri este atins, la apelul functiei
+	'add_card' (Linia 130) se redistribuie cardurile din lista de carduri
+	- Se creeaza o lista noua de carduri, alaturi de submultimele necesare,
+	si se muta toate cardurile in aceasta noua lista, in pozitii recalculate
+	- Se leaga prima submultime a listei noi de lista existenta,
+	astfel finalizandu-se redistribuirea
+
+--- --------------------------------- ---
+--- 3.5. Fisierul "client_function.c" ---
+--- --------------------------------- ---
+
+Inainte de orice functie din acest fisier, cu exceptia 'cancel' (Linia 203), se
+apeleaza 'is_blocked' (Linia 117). In cazul in care cardul este blocat, se
+opreste functia respectiva.
+
+Functia 'insert_card'
+	- Incearca sa introduca cardul ce are numarul primit ca parametru
+	- In cazul unui PIN gresit, se afiseaza mesajul aferent
+	- In cazul in care se introduce un PIN gresit de 3 ori, se blocheaza cardul
+	- Daca PIN-ul cardului nu a fost niciodata schimbat, se precizeaza acest
+	lucru
+	- Daca PIN-ul este corect, se seteaza cardul introdus la acest card
+
+Functia 'recharge'
+	- Depune suma primita ca parametru in cardul aferent, doar daca acesta este
+	un multiplu de 10. In caz negativ, se precizeaza acest lucru
+
+Functia 'withdraw'
+	- Extrage suma primita ca parametru din cardul aferent, doar daca acesta
+	este un multiplu de 10 iar cardul are fonduri suficiente. In orice caz
+	negativ, se precizeaza problema
+
+Functia 'balance_inquiry'
+	- Afiseaza suma curenta din cardul aferent
+
+Functia 'transfer'
+	- Daca fondurile de pe cardul sursa sunt suficiente, se transfera suma
+	primita ca parametru in cardul destinatie
+	- Daca nu sunt suficiente fonduri sau suma nu este un multiplu de 10,
+	se precizeaza problema
+
+Functia 'pin_change'
+	- Daca PIN-ul primit ca parametru are atributele unui PIN valid, se schimba
+	PIN-ul cardului in cauza la acesta
+
+Functia 'cancel_card'
+	- Deconecteaza cardul, setand la NULL pointerul 'inserted_card' (Linia 65)
+
+--- ------------------------ ---
+--- 3.6. Fisierul "source.c" ---
+--- ------------------------ ---
+
+Functia 'find_function'
+	- Compara buffer-ul primit din 'main' (Linia 214) cu numele functiilor
+	pentru a decide care va fi apelata
+
+Functia 'main'
+	- Initializeaza fisierele din input si output precum si principala lista
+	de carduri
+	- Se citeste cate o linie din fisierul de input care este transmisa
+	functiei 'find_function' (Linia 210)
+	- La final se elibereaza toata memoria cu care s-a lucrat
+
+--- --------------- ---
+--- 4. Alte detalli ---
+--- --------------- ---
+
+Am ales sa salvez unele elemente din LC (Linia 59) pentru a micsora numarul
+de parametri primiti de functii (majoritatea functiilor primesc ca parametru
+lista cardurilor)
+
+Am considerat ca singura modalitate de a "introduce" cardul este sa il salvez
+intr-un pointer drept 'insert_card' (iar pentru deconectare, acesta sa fie
+setat la NULL). Daca operatiile clientilor nu ar primi ca parametru numarul
+cardului, acestea ar putea fi efectuate pe cardul introdus.

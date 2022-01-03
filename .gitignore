@@ -1,0 +1,8 @@
+
+*.o
+atm
+error.out
+exec
+input.in
+output.out
+v.out
